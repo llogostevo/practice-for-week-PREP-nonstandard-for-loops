@@ -29,7 +29,6 @@ function secondPower(arr) {
     // Your code here
     let newArray = [];
     power = 0;
-    console.log(arr)
     for (let i=1; i<arr.length; i = Math.pow(2, power)){
         newArray.push(arr[i]);
         power = power+1;
@@ -40,6 +39,14 @@ function secondPower(arr) {
 function nthPower(arr, n) {
     // Return an array containing all indices that are powers of n
     // Your code here
+    let newArray = [];
+    power = 0;
+    console.log(arr)
+    for (let i=1; i<arr.length; i = Math.pow(n, power)){
+        newArray.push(arr[i]);
+        power = power+1;
+    }
+    return newArray;
 }
 
 function firstHalf(arr) {
