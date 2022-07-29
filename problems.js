@@ -41,7 +41,6 @@ function nthPower(arr, n) {
     // Your code here
     let newArray = [];
     power = 0;
-    console.log(arr)
     for (let i=1; i<arr.length; i = Math.pow(n, power)){
         newArray.push(arr[i]);
         power = power+1;
@@ -53,12 +52,23 @@ function firstHalf(arr) {
     // Return an array containing the first half of an array
     // Include middle index on odd length arr
     // Your code here
+    newArray = [];
+    for (let i=0; i<arr.length/2; i++) {
+        newArray.push(arr[i]);
+    }
+    return newArray;
 }
 
 function secondHalf(arr) {
     // Return an array containing the second half of an array
     // Exclude middle index on odd length arr
     // Your code here
+    newArray = [];
+
+    for (let i=Math.ceil(arr.length/2); i<arr.length; i++) {
+        newArray.push(arr[i]);
+    }
+    return newArray;
 }
 
 module.exports = {
